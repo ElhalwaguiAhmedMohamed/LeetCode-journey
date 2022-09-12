@@ -6,7 +6,6 @@ function maxSubArray(nums: number[]): number {
     
     for(const num of nums){
         local = Math.max(num , local+num)
-        console.log(local);
         if(local > global) 
             global = local
     }
