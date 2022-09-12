@@ -14,6 +14,8 @@
 public class Solution {
     public bool IsSameTree(TreeNode p, TreeNode q) {
         // recursive solution
+        // O(logn) time
+        // o(n) space
         if((p != null && q == null) || (q != null && p == null) || (p != null && q != null && p.val != q.val))
             return false;
         else
