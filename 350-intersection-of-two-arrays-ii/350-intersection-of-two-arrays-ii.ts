@@ -13,7 +13,7 @@ function intersect(nums1: number[], nums2: number[]): number[] {
     
     for(const num of short){
         //Intersection
-        if(short.includes(num) && long.includes(num)){
+        if(long.includes(num)){
             intersection.push(num);
             const index = long.indexOf(num);
             long.splice(index,1);
