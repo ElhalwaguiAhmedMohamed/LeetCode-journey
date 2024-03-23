@@ -1,5 +1,6 @@
 class Solution {
     public int[] twoSum(int[] nums, int target) {
+        if(nums.length == 2) return new int[] {0, 1};
         Map<Integer,Integer> map = new HashMap<>();
         int diff = 0;
         int[] res = new int[2];
