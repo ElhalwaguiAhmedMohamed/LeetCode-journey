@@ -1,13 +1,12 @@
 class Solution {
     public boolean isHappy(int n) {
-        Set<Integer> visited = new HashSet<Integer>();
-        while(!visited.contains(n)){
-            visited.add(n);
-            n = sumOfSquares(n);
-            if(n==1)
-                return true;
-        }   
-        return false;
+        int slowPointer = n;
+        int fastPointer = sumOfSquares(n);
+        while(fastPointer != 1 && fastPointer != slowPointer){
+            slowPointer = sumOfSquares(slowPointer);
+            fastPointer = sumOfSquares(sumOfSquares(fastPointer));
+        }
+        return fastPointer == 1;
     }
     public static int sumOfSquares(int number){
       int totalSum = 0;
